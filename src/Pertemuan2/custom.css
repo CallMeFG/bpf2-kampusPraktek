@@ -1,0 +1,88 @@
+/* Import Google Font agar lebih modern */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Background online dengan overlay gradasi agar teks tetap terbaca */
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #2d3436;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container utama dengan efek Glassmorphism */
+.container {
+    max-width: 500px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px); /* Efek blur di belakang kartu */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+    color: #0984e3;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #636e72;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* Styling untuk UserCard agar lebih rapi */
+.user-card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px 0;
+    border-left: 5px solid #00cec9; /* Aksen warna di samping */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.user-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #2d3436;
+}
+
+.user-card p {
+    margin: 5px 0 0 0;
+    font-size: 0.85rem;
+    color: #636e72;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #dfe6e9, transparent);
+    margin: 20px 0;
+}
+
+small {
+    display: block;
+    text-align: center;
+    color: #b2bec3;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100px;
+    border-radius: 50%; /* Membuat gambar profile melingkar */
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
