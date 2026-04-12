@@ -6,6 +6,5 @@ createRoot(document.getElementById("root"))
     .render(
         <div>
             <TailwindCSS/>
-            {/* <UseForm/> */}
         </div>
     )
