@@ -6,7 +6,6 @@ export default function TailwindCSS() {
       <FlexboxGrid />
       <Typography />
       <p className="py-8 text-black">Belajar Tailwinds CSS</p>
-      {/* <h1 class="border m-4">Belajar Tailwind CSS 4</h1> */}
       <button className="bg-blue-500 text-gray-100 px-4 py-2 mx-4 rounded-lg shadow-lg">
         Click Me!
       </button>
