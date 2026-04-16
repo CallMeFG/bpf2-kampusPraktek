@@ -5,10 +5,12 @@ export default function TailwindCSS() {
     <div className="max-w-4xl mx-auto flex flex-col gap-6">
       <FlexboxGrid />
       <Typography />
+
       <p className="py-8 text-black">Belajar Tailwinds CSS</p>
       <button className="bg-blue-500 text-gray-100 px-4 py-2 mx-4 rounded-lg shadow-lg">
         Click Me!
       </button>
+
       <Spacing />
       <BackgroundColors />
       <BorderRadius />
