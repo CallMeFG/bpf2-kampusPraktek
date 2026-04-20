@@ -6,8 +6,7 @@ import ResponsiveDesign from './ResponsiveDesign'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* Panggil komponen di sini. Silahkan comment/uncomment sesuai kebutuhan */}
-    {/* <FrameworkListSearchFilter /> */}
+    <FrameworkListSearchFilter />
     <ResponsiveDesign />
   </React.StrictMode>,
 )
