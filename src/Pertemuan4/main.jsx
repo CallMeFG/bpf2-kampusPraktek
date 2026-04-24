@@ -2,12 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import FrameworkListSearchFilter from './FrameworkListSearchFilter'
-import ResponsiveDesign from './ResponsiveDesign'
+import FrameworkLis from './FrameworkList'
+import Responsive from './Responsive'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* Panggil komponen di sini. Silahkan comment/uncomment sesuai kebutuhan */}
+    {/* <FrameworkLis/> */}
     {/* <FrameworkListSearchFilter /> */}
-    <ResponsiveDesign />
+    <Responsive/>
   </React.StrictMode>,
 )
