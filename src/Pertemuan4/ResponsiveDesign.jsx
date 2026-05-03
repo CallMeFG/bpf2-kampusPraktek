@@ -1,5 +1,3 @@
-
-
 export default function ResponsiveDesign() {
   return (
     <div className="p-8">
@@ -22,7 +20,6 @@ function ResponsiveText() {
   );
 }
 
-// Komponen Lebar Kolom (Width)
 function ResponsiveWidth() {
   return (
     <div className="mb-4">
@@ -45,7 +42,6 @@ function ResponsiveWidth() {
   );
 }
 
-// Komponen Layout Kolom (Grid)
 function ResponsiveLayout() {
   return (
     <div>

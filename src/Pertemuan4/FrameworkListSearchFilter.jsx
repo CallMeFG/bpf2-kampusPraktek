@@ -1,14 +1,13 @@
 import { useState } from "react";
 import frameworkData from "./framework.json";
 
+
 export default function FrameworkListSearchFilter() {
-  /* Inisialisasi DataForm (Best Practice State) */
   const [dataForm, setDataForm] = useState({
     searchTerm: "",
     selectedTag: "",
   });
 
-  /* Inisialisasi Handle perubahan nilai input form */
   const handleChange = (evt) => {
     const { name, value } = evt.target;
     setDataForm({
@@ -17,7 +16,6 @@ export default function FrameworkListSearchFilter() {
     });
   };
 
-  /* Deklarasi Logic Search & Filter */
   const _searchTerm = dataForm.searchTerm.toLowerCase();
   const filteredFrameworks = frameworkData.filter((framework) => {
     const matchesSearch =
@@ -31,14 +29,12 @@ export default function FrameworkListSearchFilter() {
     return matchesSearch && matchesTag;
   });
 
-  /* Deklarasi pengambilan unique tags di frameworkData */
   const allTags = [
     ...new Set(frameworkData.flatMap((framework) => framework.tags)),
   ];
 
   return (
     <div className="p-8">
-      {/* Search dan Filter Input */}
       <input
         type="text"
         name="searchTerm"
@@ -62,7 +58,6 @@ export default function FrameworkListSearchFilter() {
         ))}
       </select>
 
-      {/* Render Data yang Difilter */}
       {filteredFrameworks.map((item) => (
         <div
           key={item.id}
@@ -71,7 +66,6 @@ export default function FrameworkListSearchFilter() {
           <h2 className="text-lg font-bold text-gray-800">{item.name}</h2>
           <p className="text-gray-600 mb-2">{item.description}</p>
           
-          {/* Menampilkan informasi nested */}
           <p className="text-sm font-semibold text-gray-700 mt-2">
             Developer: <span className="font-normal">{item.details.developer}</span>
           </p>
@@ -82,7 +76,6 @@ export default function FrameworkListSearchFilter() {
             </a>
           </p>
 
-          {/* Menampilkan array tags dengan map */}
           <div className="mt-3">
             {item.tags.map((tag, index) => (
               <span
