@@ -1,16 +1,7 @@
-import { NavLink } from "react-router-dom";
-import { FaTachometerAlt, FaShoppingBag, FaUsers, FaPlus, FaExclamationTriangle, FaLock, FaBan } from "react-icons/fa";
-import { MdDashboard } from "react-icons/md";
-import { IoIosPeople } from "react-icons/io";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { IoIosPeople } from "react-icons/io"; 
+import { AiOutlineShoppingCart } from "react-icons/ai"; 
 import { FaHome } from "react-icons/fa";
-const menuClass = ({ isActive }) =>
-    `flex cursor-pointer items-center rounded-xl p-4 space-x-2
-    ${isActive
-        ? "text-hijau bg-green-200 font-extrabold"
-        : "text-gray-600 hover:text-hijau hover:bg-green-200 hover:font-extrabold"
-    }`;
-
+import { MdDashboard } from "react-icons/md"; 
 export default function Sidebar() {
     return (
         <div id="sidebar" className="flex min-h-screen w-90 flex-col bg-white p-10 shadow-lg">
@@ -22,52 +13,27 @@ export default function Sidebar() {
                     Modern Admin Dashboard
                 </span>
             </div>
-            
+
             <div id="sidebar-menu" className="mt-10">
                 <ul id="menu-list" className="space-y-3">
                     <li>
-                        <NavLink to="/" end className={menuClass}>
+	                    <div id="menu-1" className="hover:text-hijau flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:font-extrabold">
                             <MdDashboard className="mr-4 text-xl" />
                             <span>Dashboard</span>
-                        </NavLink>
-                    </li>
+                        </div>
+	                  </li>
                     <li>
-                        <NavLink to="/orders" className={menuClass}>
-                            <AiOutlineShoppingCart className="mr-4 text-xl" />
+	                    <div id="menu-2" className="hover:text-hijau flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:font-extrabold">
+                            <AiOutlineShoppingCart  className="mr-4 text-xl"/>
                             <span>Orders</span>
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/customers" className={menuClass}>
+                        </div>
+	                  </li>
+	                  <li>
+	                    <div id="menu-3" className="hover:text-hijau flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:font-extrabold">
                             <IoIosPeople className="mr-4 text-xl" />
                             <span>Customers</span>
-                        </NavLink>
-                    </li>
-
-                    {/* Menu Error Pages (bagian latihan) */}
-                    <li className="pt-4">
-                        <p className="text-xs text-gray-400 uppercase font-semibold px-4 mb-2">
-                            Error Pages
-                        </p>
-                    </li>
-                    <li>
-                        <NavLink to="/error/400" className={menuClass}>
-                            <FaExclamationTriangle className="mr-4 text-xl" />
-                            Error 400
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/error/401" className={menuClass}>
-                            <FaLock className="mr-4 text-xl" />
-                            Error 401
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/error/403" className={menuClass}>
-                            <FaBan className="mr-4 text-xl" />
-                            Error 403
-                        </NavLink>
-                    </li>
+                        </div>
+	                  </li>
                 </ul>
             </div>
 

@@ -5,6 +5,7 @@ import { SlSettings } from "react-icons/sl";
 export default function Header() {
     return (
         <div id="header-container" className="flex justify-between items-center p-4">
+            {/* Search Bar */}
             <div id="search-bar" className="relative w-full max-w-lg">
                 <input
                     id="search-input"
@@ -15,6 +16,7 @@ export default function Header() {
                 <FaSearch id="search-icon" className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-300"/>
             </div>
 
+            {/* Icon & Profile Section */}
             <div id="icons-container" className="flex items-center space-x-4">
                 {/* Icons */}
                 <div id="notification-icon" className="relative p-3 bg-blue-100 rounded-2xl text-blue-500 cursor-pointer">
@@ -29,6 +31,7 @@ export default function Header() {
                 </div>
              
 
+                {/* Profile Section */}
                 <div id="profile-container" className="flex items-center space-x-4 border-l pl-4 border-gray-300">
                     <span id="profile-text">
                         Hello, <b>CallMeFG</b>

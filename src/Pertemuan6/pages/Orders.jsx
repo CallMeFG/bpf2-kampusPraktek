@@ -46,7 +46,6 @@ export default function Orders() {
     const [orders, setOrders] = useState(ordersData);
     const [showForm, setShowForm] = useState(false);
     const [form, setForm] = useState(emptyForm);
-
     const handleSubmit = () => {
         if (!form.customerName || !form.totalPrice || !form.orderDate) return;
         const newOrder = {
@@ -70,7 +69,6 @@ export default function Orders() {
                 </button>
             </PageHeader>
 
-            {/* Modal Form */}
             {showForm && (
                 <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
                     <div className="bg-white rounded-xl p-8 w-full max-w-md shadow-xl">

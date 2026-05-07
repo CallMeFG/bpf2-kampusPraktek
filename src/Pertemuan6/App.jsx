@@ -7,12 +7,10 @@ import Customers from "./pages/Customers";
 import NotFound from "./pages/NotFound";
 import ErrorPage from "./pages/ErrorPage";
 
-// Wrapper untuk route /error/:code agar bisa baca param dari URL
 function ErrorRoute() {
     const { code } = useParams();
     return <ErrorPage code={parseInt(code)} />;
 }
-
 export default function App() {
     return (
         <div id="app-container" className="bg-gray-100 min-h-screen flex">

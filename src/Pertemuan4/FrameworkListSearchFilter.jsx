@@ -19,8 +19,12 @@ export default function FrameworkListSearchFilter() {
   const _searchTerm = dataForm.searchTerm.toLowerCase();
   const filteredFrameworks = frameworkData.filter((framework) => {
     const matchesSearch =
-      framework.name.toLowerCase().includes(_searchTerm) ||
-      framework.description.toLowerCase().includes(_searchTerm);
+      framework.name
+        .toLowerCase()
+        .includes(_searchTerm) ||
+      framework.description
+        .toLowerCase()
+        .includes(_searchTerm);
 
     const matchesTag = dataForm.selectedTag
       ? framework.tags.includes(dataForm.selectedTag)
@@ -50,6 +54,8 @@ export default function FrameworkListSearchFilter() {
         onChange={handleChange}
         className="w-full p-2 border border-gray-300 rounded mb-4"
       >
+
+      {/* Bagian untuk selection tag */}
         <option value="">All Tags</option>
         {allTags.map((tag, index) => (
           <option key={index} value={tag}>
@@ -63,19 +69,22 @@ export default function FrameworkListSearchFilter() {
           key={item.id}
           className="border p-4 mb-4 rounded-lg shadow-md bg-white"
         >
+          {/* nama */}
           <h2 className="text-lg font-bold text-gray-800">{item.name}</h2>
+
+          {/* deskripsi */}
           <p className="text-gray-600 mb-2">{item.description}</p>
-          
           <p className="text-sm font-semibold text-gray-700 mt-2">
             Developer: <span className="font-normal">{item.details.developer}</span>
           </p>
+
+          {/* link untuk informasi website nya */}
           <p className="text-sm font-semibold text-gray-700">
             Official Website:{" "}
-            <a href={item.details.officialWebsite.replace(/[<>]/g, '')} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline font-normal">
-              {item.details.officialWebsite.replace(/[<>]/g, '')}
+            <a href={item.details.officialWebsite.replace(/[<>]/g, '')} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline font-normal" >
+              View Website
             </a>
           </p>
-
           <div className="mt-3">
             {item.tags.map((tag, index) => (
               <span
@@ -85,6 +94,7 @@ export default function FrameworkListSearchFilter() {
                 {tag}
               </span>
             ))}
+            
           </div>
         </div>
       ))}
